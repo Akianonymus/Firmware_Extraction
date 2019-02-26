@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export PATH=~/bin:$HOME/.firm_extract/bin:$PATH
+
+alias payload='python2 ~/.firm_extract/payload/extract_android_ota_payload.py'

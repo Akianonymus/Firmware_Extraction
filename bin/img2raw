@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+IN="$1"
+OUT="$2"
+
+magic=$(grep -aobP -m1 '\x53\xEF' $IN | head -1 | cut -d":" -f1)
+
+offset=$(($magic-1080))
+
+dd if=$IN of=$OUT ibs=$offset skip=1
+
+rm $1
