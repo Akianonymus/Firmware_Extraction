@@ -67,9 +67,11 @@ If you are unsure which format the given file is, use [file command](http://man7
 
 For this conversation, google's tool brotli is used.
 
-For example we need to convert system.new.dat.br to system.new.dat
+For example we need to convert [system|vendor].new.dat.br to [system|vendor].new.dat
 
-	brotli --decompress --in system.new.dat.br --out system.new.dat
+	brotli --decompress -- system.new.dat.br --out system.new.dat
+
+	brotli --decompress -- vendor.new.dat.br --out vendor.new.dat
 
 And done.
 ##
